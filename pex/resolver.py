@@ -512,6 +512,9 @@ class ResolveRequest(object):
         )
         to_install.extend(install_requests)
 
+        print('SHIT!')
+        print(build_requests)
+        print(spawn_wheel_build)
         for build_result in self._run_parallel(inputs=build_requests,
                                                spawn_func=spawn_wheel_build,
                                                raise_type=Untranslateable):
